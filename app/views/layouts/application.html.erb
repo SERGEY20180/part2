@@ -7,9 +7,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= link_to "Домой", home_index_path %>
-|
-<%= link_to "Страницы", pages_index_path %>
+    <%= link_to "Домой", home_index_path %>
+    |
+    <%= link_to "Страницы", pages_index_path %>
+    |
+    <%= link_to "Пользователи", home_user_path %>
+    |
+    <% if user_signed_in? %>
+    <%= link_to "Выход", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Вход", new_user_session_path %>
+      |
+      <%= link_to "Регистрация", new_user_registration_path %>
+    <% end %>
+
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
 
 <%= yield %>
 
