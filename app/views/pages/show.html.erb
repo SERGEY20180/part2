@@ -20,5 +20,8 @@
   <%= @page.text %>
 </p>
 
+<p>
+<%= image_tag(@page.picture.url(:thumb), alt: 'Image') if @page.picture? %>
+</p>
 <%= link_to 'Edit', edit_page_path(@page) %> |
 <%= link_to 'Back', pages_path %>
