@@ -1,3 +1,20 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@media (max-width: 767px){
+	.nav-pills>li {
+		float: none;
+	}
+	.nav-pills {
+		text-align: center;
+	}
+
+	.header h1 {
+		letter-spacing: 5px;
+		font-size: 280%;
+	}
+	.header {
+		text-align: center;
+	}
+}

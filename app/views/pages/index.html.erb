@@ -2,10 +2,10 @@
 
 <h1>Список страниц</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th> title</th>
+      <th>Title</th>
       <th>String</th>
       <th>Description</th>
       <th>Text</th>
@@ -15,14 +15,14 @@
 
   <tbody>
     <% @pages.each do |page| %>
-      <tr>
-        <td><%= page. title %></td>
+      <tr class="bg-success">
+        <td><%= page.title %></td>
         <td><%= page.string %></td>
         <td><%= page.description %></td>
         <td><%= page.text %></td>
-        <td><%= link_to 'Show', page %></td>
-        <td><%= link_to 'Edit', edit_page_path(page) %></td>
-        <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', page, class: "glyphicon glyphicon-search" %></td>
+        <td><%= link_to 'Edit', edit_page_path(page), class: "glyphicon glyphicon-pencil" %></td>
+        <td><%= link_to 'Destroy', page, class: "glyphicon glyphicon-remove", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
