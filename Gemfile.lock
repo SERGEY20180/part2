@@ -69,6 +69,7 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.25)
+    fotorama-rails (0.1.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (0.9.5)
@@ -188,6 +189,7 @@ DEPENDENCIES
   carrierwave (~> 1.0)
   coffee-rails (~> 4.1.0)
   devise
+  fotorama-rails
   jbuilder (~> 2.0)
   jquery-rails
   mini_magick
