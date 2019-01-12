@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Список страниц</h1>
+<strong>Current User:</strong>  
+<%= current_user.email %> 
+
+<h2>Список страниц</h2>
 
 <table class="table table-striped">
   <thead>
@@ -9,6 +12,8 @@
       <th>String</th>
       <th>Description</th>
       <th>Text</th>
+      <th>Created_at</th>
+      <th>Updated_at</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +25,8 @@
         <td><%= page.string %></td>
         <td><%= page.description %></td>
         <td><%= page.text %></td>
+        <td><%= page.created_at %></td>
+        <td><%= page.updated_at %></td>        
         <td><%= link_to 'Show', page, class: "glyphicon glyphicon-search" %></td>
         <td><%= link_to 'Edit', edit_page_path(page), class: "glyphicon glyphicon-pencil" %></td>
         <td><%= link_to 'Destroy', page, class: "glyphicon glyphicon-remove", method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -31,5 +38,9 @@
 <br>
 
 <%= link_to 'New Page', new_page_path %>
+<<<<<<< HEAD
 <%= link_to 'New Page', new_page_path %>
 <%= link_to 'New Page', new_page_path %>
+=======
+
+>>>>>>> new1

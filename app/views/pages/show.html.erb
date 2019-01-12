@@ -20,5 +20,27 @@
   <%= @page.text %>
 </p>
 
+<p><strong>Pictures</strong></p> 
+
+<div class="fotorama" data-width="450" data-height="300" data-allowfullscreen="native">
+  <% @page.pictures.each do |picture| %>
+    <%= image_tag(picture.picture, alt: 'Image') if picture.picture? %>
+  <% end %>
+</div>
+    
+ 
+<p>
+  <strong>Add a picture:</strong>
+</p>
+
+<%= form_for([@page, @page.pictures.build]) do |f| %>
+    <%= f.label :file %><br>
+    <%= f.file_field :picture%>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+
 <%= link_to 'Edit', edit_page_path(@page) %> |
 <%= link_to 'Back', pages_path %>
