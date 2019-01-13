@@ -14,3 +14,20 @@
 .fotorama__wrap{
   margin: 0 auto;
 }
+
+@media (max-width: 767px){
+	.nav-pills>li {
+		float: none;
+	}
+	.nav-pills {
+		text-align: center;
+	}
+
+	.header h1 {
+		letter-spacing: 5px;
+		font-size: 280%;
+	}
+	.header {
+		text-align: center;
+	}
+}
