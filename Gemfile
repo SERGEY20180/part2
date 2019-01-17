@@ -63,3 +63,10 @@ end
     gem 'pg', '0.20'
     gem 'rails_12factor', '0.0.2'
   end
+
+
+group :test do
+  gem 'rspec-rails'
+  gem 'factory_girl'  
+  
+end  
