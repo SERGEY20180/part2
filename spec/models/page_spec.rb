@@ -1,11 +1,14 @@
-#require 'rails_helper'
-require 'spec_helper'
-RSpec.describe Page, type: :model do
-describe 'validation' do 
-  
-  it "should do something" do
-    expect(1+1).to eq 2
-    
-  end
- end	
-end 
+require 'rails_helper'
+  describe Page do
+    it "is valid with a title, string" do
+      page = Page.new(
+        title: 'First title',
+        string: 'First string')
+      expect(page).to be_valid
+    end
+    it "is invalid without a title" do
+      page = Page.new(title: nil)
+      page.valid?
+      expect(page.errors[:title]).to include("can't be blank")	
+    end
+  end 

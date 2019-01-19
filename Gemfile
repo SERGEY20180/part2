@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'rake', '< 11.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.10'
 # Use postgresql as the database for Active Record
@@ -45,6 +45,8 @@ gem 'fotorama-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem "rspec-rails", "~> 3.1.0"
+  gem "factory_girl_rails", "~> 4.4.1"
 end
 
 group :development do
@@ -66,7 +68,13 @@ end
 
 
 group :test do
-  gem 'rspec-rails'
-  gem 'factory_girl'  
+  #gem 'rspec-rails'
+  #gem 'factory_girl'
+  #gem "faker", "~> 1.4.3"
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+  gem "capybara", "~> 2.4.3"
+  gem "database_cleaner", "~> 1.3.0"
+  gem "launchy", "~> 2.4.2"
+  gem "selenium-webdriver", "~> 2.43.0"  
   
 end  
