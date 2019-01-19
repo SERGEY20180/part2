@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :index, :show, :create, :edit, :update, :destroy]
 
 
   #before_action :authenticate_user!, except: [ :index, :show]
